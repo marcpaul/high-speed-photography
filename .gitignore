@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+# Platformio Atom Package
+.pioenvs
+.piolibdeps
+.clang_complete
+.gcc-flags.json
