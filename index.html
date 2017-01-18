@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Human-sensors by marcpaul</title>
+    <title>high-speed-photography by marcpaul</title>
 
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
@@ -23,7 +23,7 @@
     <div class="wrapper">
         <header>
             <h1>high-speed-photography</h1>
-            <p>Laser-triggered Photography with a Texas Instruments MSP430G2553 Microcontroller</p>
+            <p>Laser-triggered Photography with a Texas Instruments MSP430G2452 Microcontroller</p>
 
             <p class="view"><a href="https://github.com/marcpaul/high-speed-photography">View the Project on GitHub <small>marcpaul/high-speed-photography</small></a></p>
 
@@ -52,19 +52,67 @@
         </header>
         <section>
             <p></p>
+            <div class="hardware">
+                <img src="images/hsp_small.jpg" alt="High Speed Photography Concept">
+                <h2>The Concept</h2>
+                <p>
+                    The basic concept is that the flash unit is fired when the object interruptes the laser beam.<br>
+                    So you can capture opjects in motion for example.<br>
+                </p>
+                <strong>In detail:</strong>
+                <ul>
+                    <li>
+                        It must be dark.
+                    </li>
+                    <li>
+                        When you switch on SW1 you can adjust the laser and sensor.<br>
+                        LED1 is on if laser hits sensor.<br>
+                        After adjusting laser switch SW1 off.
+                    </li>
+                    <li>
+                        With ROT1 you can set a delay.<br>
+                        When playing around with the setup you will understand why.
+                    </li>
+                    <li>
+                        Now you press BUT1 and the camera is triggered.<br>
+                        You must set the shutter speed to a high value.
+                    </li>
+                    <li>
+                        Then you're waiting...<br>
+                        If the laser beam is interrupted the flash unit fires.<br>
+                        That's it.
+                    </li>
+                </ul>
+                <br>
+                <p>
+                    The Texas Instruments MSP430G2452 Microcontroller does all the work.<br>
+                    The Opto Coupler is very important because the flash unit needs a high current.<br>
+                    The Opto Coupler isolates the flash circuit and is triggered with the MSP MC.
+                </p>
+                <a href="images/hsp_big.jpg" download target="_blank">Download Concept</a>
+            </div>
+            <div class="hardware">
+                <img src="images/hsc_small.jpg" alt="High Speed Photography Controller Schematics">
+                <h2>The Schematics</h2>
+                <a href="images/hsc_big.png" download target="_blank">Download Schematics</a>
+            </div>
+            <div class="hardware">
+                <h2>Some examples also showing how to use delay</h2>
+                <img src="images/ball_2.jpg" alt="Testing the High Speed Photography Controller 1">
+                <p>
+                    First test without delay.<br>
+                    You can see the laser unit on the right and the laser beam on the ball.
+                </p>
+                <img src="images/ball_3.jpg" alt="Testing the High Speed Photography Controller 2">
+                <p>
+                    Second test with delay to capture splatter (which needs some training).
+                </p>
+            </div>
 
-            <h3><a id="sensors-included" class="anchor" href="#sensors-included" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a></h3>
-
-            <h3><a id="hardware-setup" class="anchor" href="#hardware-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a></h3>
-
-            <div class="hardware" id="hardware-olimex">
+            <!--div class="hardware" id="hardware-olimex">
                 <img src="images/olimexino-stm32-map.jpg" alt="Olimexino STM32" usemap="stm32-map">
                 <map name="stm32-map">
-                <!-- #$-:Image map file created by GIMP Image Map plug-in -->
-                <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-                <!-- #$-:Please do not edit lines starting with "#$" -->
-                <!-- #$VERSION:2.3 -->
-                <!-- #$AUTHOR:MARC PAUL -->
+
                 <area shape="circle" coords="312,37,30"  nohref="nohref" data-tooltip-content="used to control leds, buttons, switches etc." data-tooltip-title="digital pins">
                 <area shape="circle" coords="474,227,30"  nohref="nohref" data-tooltip-title="analog pins" data-tooltip-content="used to sample analog signals from ecg shield and other sensors.">
                 <area shape="circle" coords="98,297,30"  nohref="nohref" data-tooltip-title="UEXT connector" data-tooltip-content="the UEXT connector is an Olimex standard. all essential communication interfaces are present: RS232, SPI, I2C and 3.3V/ground.">
@@ -88,7 +136,7 @@
                             <small><a target="_blank" href="http://code.google.com/p/maple-sdfat/downloads/list">Maple SDFAT Library</a></small></p>
                     </dl>
                 </dd>
-            </div>
+            </div-->
 
 
         </section>
