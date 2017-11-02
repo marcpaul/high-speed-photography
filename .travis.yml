@@ -19,18 +19,19 @@
 # Travis CI documentation (see above).
 #
 
-
 language: python
 python:
-    - "2.7"
-
+  - "2.7"
 sudo: false
 cache:
-    directories:
-        - "~/.platformio"
-
+  directories:
+    - "~/.platformio"
 install:
-    - pip install -U platformio
+  - pip install -U platformio
 
 script:
-    - platformio run
+  - platformio run
+notifications:
+  email: false
+  slack:
+    secure: qsJkiOEYwUeWX8CKMvkAWty/+EwVbXChrVYDfDwVCiarRdo3yM4VJ1DuIa5B2MVrD67efbfTfNwj9wRrKmChS4JpKOG+zcmwkdoOxVzRm2wCLoADJO9vFblwSGHreHbF11j3M9DbEba9zqYrbvIrAXExC4WCe2ORm8hd8MKFWFHJZFCAl717A0EpE48ndi3ljYyFy2Paju6PG/O218ZZZ9N8fWratmIzA1743zBh303nLSaapGIjT7cD2OQJgd07HCLCayGeCKyihH8fEm3O3PfTTm1Pk0uVqHPXI48lglM6dSVji8YM6dcwybOp7U+o01GXtpw1Ho4B1DioFzyRNHyTErxBqla05mPVkAcizVIsf1VC937ABbMlXKUBYWKIjcznBdPa7jLuvQTayoxAhrhPOz2c8VUs5Pfec/fM4/5HMDw/3yyfMmpPlfoZSOLc/E8ryS6KRkXKHzpmhlAb+LFNz/GUKGR6Yxjs2R0StMiIjNOt3g8AUNhtMTQGkmjijrBNPMgCrP2ik/X3ZaGBXTZ/qZDebba5qKaucYUC18k5oMmzKqPnb1l4wGPyfW441Uf3xHG+AciGvPNMOk23w5o5JpXZcMHPX6zMpLTmKwCKwoS4leuG/W3kpY6pARqnaTydWe5/VPbgFDw2gchXmKHuKpKRKoxUNJt1DWW83is=
